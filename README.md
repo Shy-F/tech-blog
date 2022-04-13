@@ -1,6 +1,6 @@
 ## Tech Blog
 
-##Description
+## Description
 A blog where user can sign up and log in to create tech related posts and comment.
 
 ## Installation
@@ -9,6 +9,7 @@ none
 ## Usage 
 Deployed on Heroku
 https://mighty-peak-60898.herokuapp.com/
+![Deployed app](https://github.com/Shy-F/tech-blog/blob/main/public/Screenshot.png)
 
 ## License
   This project is license under MIT
