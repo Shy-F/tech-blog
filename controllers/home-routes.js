@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 //get all posts for homepage
 router.get('/', (req, res) => {
@@ -8,7 +9,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            'content',
+            'post_url',
             'title',
             'created_at'
         ],
@@ -49,7 +50,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'content',
+            'post_url',
             'title',
             'created_at'
         ],
@@ -96,17 +97,5 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-
-    res.render('signup');
-});
-
-router.get('*', (req, res) => {
-    res.status(404).send('Not available');
-})
 
 module.exports = router;

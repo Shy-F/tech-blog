@@ -1,15 +1,30 @@
 {
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.2",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.2",
-    "express-handlebars": "^6.0.2",
-    "express-session": "^1.17.2",
-    "handlebars": "^4.7.7",
-    "modules": "^0.4.0",
-    "mysql2": "^2.3.3",
-    "node": "^17.4.0",
-    "sequelize": "^6.16.1"
-  }
+    "name": "tech-blog",
+    "version": "1.0.0",
+    "description": "CMS-style blog site",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "seed": "node seeds/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Shybreasia Fleetwood",
+    "license": "",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "connect-session-sequelize": "^7.1.2",
+        "dotenv": "^15.0.0",
+        "express": "^4.17.2",
+        "express-handlebars": "^6.0.2",
+        "express-session": "^1.17.2",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.16.0"
+    }
 }
